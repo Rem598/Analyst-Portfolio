@@ -51,7 +51,8 @@
         <p><li>To explore total sales by region, I used the following SQL query: </li></p>\
         <div class ="query-block">
             <pre>
-                <p><b><i style="color: red;">SELECT `Region`, SUM(`Total Revenue`) AS Total_Sales 
+                <p><b><i style="color: red;">
+                    SELECT `Region`, SUM(`Total Revenue`) AS Total_Sales 
                     FROM `sales data` 
                     GROUP BY `Region` 
                     ORDER BY Total_Sales DESC; 
@@ -64,7 +65,8 @@
         <p><li>To find the top-selling products by total revenue, I ran this query:</li> </p>
         <div class ="query-block">
             <pre>
-           <p><b><i style="color: red;">SELECT `Product Name`, SUM(`Total Revenue`) AS Revenue 
+           <p><b><i style="color: red;">
+            SELECT `Product Name`, SUM(`Total Revenue`) AS Revenue 
             FROM `sales data` 
             GROUP BY `Product Name` 
             ORDER BY Revenue DESC 
@@ -76,7 +78,8 @@
         <p><li>To analyze sales trends over time, I grouped the sales data by month using this query: </li></p> 
         <div class ="query-block">
             <pre> 
-           <p><b><i style="color: red;">SELECT DATE_FORMAT(`Date`, '%Y-%m') AS Month, SUM(`Total Revenue`) AS Monthly_Sales 
+           <p><b><i style="color: red;">
+            SELECT DATE_FORMAT(`Date`, '%Y-%m') AS Month, SUM(`Total Revenue`) AS Monthly_Sales 
             FROM `sales data` 
             GROUP BY Month 
             ORDER BY Month; </i></b></p> 
