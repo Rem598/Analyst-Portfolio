@@ -49,12 +49,6 @@ Hello! I’m [Your Name], a passionate **Data Analyst** with a keen interest in 
 
 When I’m not analyzing data, you can find me exploring new technologies, building my portfolio, or diving into the world of anime. I’m always eager to learn new things and take on challenging data problems.
 
-## Contact Me
-
-You can connect with me via the following platforms:
-- [LinkedIn](your-linkedin-profile)
-- [GitHub](your-github-profile)
-- Email: [rehemakemunto40@gmail.com]
 
 ## License
 

@@ -75,6 +75,21 @@ button:focus {
 }
 
 
+/* Section box styling */
+section {
+    background: linear-gradient( to right ,rgb(234, 236, 240), rgb(163, 216, 252));
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Title for sections */
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
 /* About Me Section */
 #about {
     margin-bottom: 20px;
