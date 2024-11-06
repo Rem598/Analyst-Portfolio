@@ -16,7 +16,7 @@ This project uses the **Framingham Heart Study dataset** to perform a cluster an
 - Identified distinct clusters based on health metrics such as cholesterol levels, age, and smoking habits.
 - Found correlations between high cholesterol levels and higher risk of heart disease.
 
-You can [view the full analysis here](link-to-project).
+You can [view the full analysis here](https://github.com/Rem598/Analyst-Portfolio/blob/main/cluster-analysis.html).
 
 ---
 
@@ -29,34 +29,34 @@ This project involves analyzing **online sales data** to understand customer beh
 
 #### Key Insights:
 - Identified top-selling products, seasonal trends, and customer demographics.
-- Analyzed sales performance over time and found correlations between marketing campaigns and sales spikes.
 
-You can [view the full analysis here](link-to-project).
+
+You can [view the full analysis here](https://github.com/Rem598/Analyst-Portfolio/blob/main/online-sales.html).
 
 ---
 
 ## Skills
 
 - **Data Analysis:** Python, R, SQL, Excel
-- **Data Visualization:** Matplotlib, Seaborn, Tableau
+- **Data Visualization:** Tableau
 - **Statistical Analysis:** Descriptive statistics, regression analysis
 - **Machine Learning:** Supervised and unsupervised learning, clustering
-- **Data Cleaning & Preprocessing:** Handling missing data, data transformation, normalization
+- **Data Cleaning & Preprocessing:** Handling missing data, data transformation
 
 ## About Me
 
-Hello! I’m [Your Name], a passionate **Data Analyst** with a keen interest in turning raw data into actionable insights. I specialize in statistical analysis, data visualization, and machine learning. I love exploring data, uncovering hidden patterns, and helping businesses make data-driven decisions.
+Hello! I’m Rehema, a passionate **Data Analyst** with a keen interest in turning raw data into actionable insights. I specialize in statistical analysis, data visualization, and machine learning. I love exploring data, uncovering hidden patterns, and helping businesses make data-driven decisions.
 
-When I’m not analyzing data, you can find me exploring new technologies, building my portfolio, or diving into the world of anime. I’m always eager to learn new things and take on challenging data problems.
+When I’m not analyzing data, you can find me exploring new technologies or building my portfolio. I’m always eager to learn new things and take on challenging data problems.
 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Dataset Used
 
 The datasets used in this project are publicly available. You can access the datasets here:
-- **Cluster Analysis Dataset**: [Framingham Heart Study dataset link](dataset-link)
-- **Online Sales Dataset**: [Sales Data Link](dataset-link)
+- **Cluster Analysis Dataset**: [Framingham Heart Study dataset link](https://www.kaggle.com/datasets/aasheesh200/framingham-heart-study-dataset)
+- **Online Sales Dataset**: [Sales Data Link](https://www.kaggle.com/datasets/shreyanshverma27/online-sales-dataset-popular-marketplace-data)
 
