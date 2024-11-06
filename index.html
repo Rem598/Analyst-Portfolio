@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehema Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Portfolio Header -->
+    <header>
+        <h1>Rehema Kemunto  Portfolio</h1>
+        <p>Welcome to my portfolio! </p>
+        
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a data analyst with a strong foundation in statistical analysis, data visualization, and 
+        data-driven decision making. With hands-on experience in analyzing complex datasets, I’m passionate 
+        about using data to uncover insights that drive strategic decisions. I am skilled in R, Python, and SQL, 
+        and I am always eager to take on new challenges and further develop my analytical expertise.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <!-- Cluster Analysis Project -->
+        <div class="project">
+            <h3>Cluster Analysis on Framingham Heart Study Data</h3>
+            <p>
+                This project aimed to identify groups of patients with similar characteristics using cluster analysis. 
+                Using R, I analyzed the Framingham Heart Study dataset to find patterns that could reveal health risks 
+                across different clusters. Key steps included data cleaning, scaling variables, and choosing an optimal 
+                number of clusters through elbow and silhouette methods.
+            </p>
+            
+            <ul>
+                <li><strong>Tools:</strong> R, ggplot2, dplyr</li>
+                <li><strong>Skills Used:</strong> Clustering, Statistical Analysis, Data Visualization</li>
+                <li><strong>Outcome:</strong> Successfully identified distinct patient groups that may require different 
+                preventive care approaches, aiding in targeted healthcare interventions.</li>
+            </ul>
+            <button onclick="window.location.href='cluster-analysis.html'">View Project</button>
+        </div>
+
+        <div class="project">
+            <h3>Online Sales Data Analysis</h3>
+            <p>
+                In this project, I analyzed online sales data to discover trends, customer preferences, and sales patterns 
+                using various visualizations. Key insights were displayed through pie charts, line graphs, and histograms, 
+                enabling better understanding of sales performance and product demand.
+            </p>
+            
+            <ul>
+                <li><strong>Tools:</strong> Excel, Python (matplotlib, seaborn)</li>
+                <li><strong>Skills Used:</strong> Data Cleaning, Visualization, Trend Analysis</li>
+                <li><strong>Outcome:</strong> Generated actionable insights for sales strategy and inventory planning, 
+                helping to optimize stock and meet customer demand.</li>
+            </ul>
+            <button onclick="window.location.href='online-sales.html'">View Project</button>
+        </div>   
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            
+            <li><strong>Tools:</strong> Excel, SPSS, STATA, MySQL</li>
+            <li><strong>Programming:</strong> Python, R, SQL</li>
+            <li><strong>Data Visualization:</strong> Charts, Graphs</li>
+
+            
+        </ul>
+    </section>
+
+
+
+    <section>
+        <p>Download Portfolio</p>
+        <button onclick="downloadPortfolio()">Download</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <h3>Feel free to reach out to me</h3>
+        <p>Email: rehemakemunto40@gmail.com</p>
+        <p> LinkedIn: <a href="https://www.linkedin.com/in/reia" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/reia</a></p>
+    </section>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
