@@ -5,31 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Sales Data Project</title>
     <link rel="stylesheet" href="styles.css">
+    <button onclick="window.location.href='index.html'">Back to Portfolio</button>
 </head>
 <body>
 
     <!-- Project Header -->
     <header>
         <h1>Online Sales Data Analysis</h1>
-        <button onclick="window.location.href='index.html'">Back to Portfolio</button>
+        
     </header>
 
     <!-- Project Details -->
     <section id="project-details">
         <h2>Project Overview</h2>
-        <p>This project focuses on analyzing an online sales dataset, aiming to uncover trends in customer purchasing behavior, product performance, and seasonality. I used various data visualization techniques to convey insights in a clear and actionable way.</p>
+        <p>A SQL and Excel analysis of an online sales dataset. The objective is to go beyond numbers and figures (such as total sales per region, products performance, or historical sales trends). This document contains all the steps, SQL queries, images of analysis and visualization. </p>
         
+        <h2>Dataset Overview</h2>
+        <p>The dataset contains the following columns:</p> 
+
+            <li>Transaction ID: Unique identifier for each transaction.</li>     
+            <li>Date: Date of the transaction.</li> 
+            <li>Product Category: Category of the product sold.</li>
+            <li>Product Name: Name of the product sold. </li>
+            <li>Units Sold: Number of units sold in the transaction. </li>
+            <li>Unit Price: Price per unit of the product. </li>
+            <li>Total Revenue: Total revenue generated from the transaction (Units Sold * Unit Price). </li>
+            <li>Region: Region where the sale occurred. </li>
+            <li>Payment Method: Method used for the payment (e.g., Credit Card, Debit card or PayPal) </li>
+            <p>Dataset used: <a href="https://1drv.ms/x/c/f3b0c348d6b1830a/Ecup7op-wqRKrI2LLXY2iK8BXzSlLpDHA7yAE-baXjG96A?e=J2UEtb&nav=MTVfe0UzRDk1QjNGLTY3RTQtNDgxRi04QkE4LURCQkREN0JFRUIxRH0" target="_blank" class="dataset-link">Download the dataset here</a></p>
+
+    </section>
+    <section>
+ 
         <h2>Approach & Methodology</h2>
-        <ul>
+        
             <li>Data cleaning and preparation (handling missing data, normalization).</li>
             <li>Exploratory Data Analysis (EDA) to understand data patterns.</li>
             <li>Created visualizations (pie charts, line graphs, histograms) to represent key metrics.</li>
             <li>Identified trends such as peak sales periods and popular products.</li>
-        </ul>
+        
+    </section>
+    <section>    
 
+        <h2>SQL Queries for Data Exploration </h2>
+        <p><li>To explore total sales by region, I used the following SQL query: </li></p>\
+        <div class ="query-block">
+            <pre>
+                <p><b><i style="color: red;">SELECT `Region`, SUM(`Total Revenue`) AS Total_Sales 
+                    FROM `sales data` 
+                    GROUP BY `Region` 
+                    ORDER BY Total_Sales DESC; 
+                </b></i></p>
+
+            </pre>
+        </div>
+            
+        <h2>SQL Queries for Product Analysis </h2>
+        <p><li>To find the top-selling products by total revenue, I ran this query:</li> </p>
+        <div class ="query-block">
+            <pre>
+           <p><b><i style="color: red;">SELECT `Product Name`, SUM(`Total Revenue`) AS Revenue 
+            FROM `sales data` 
+            GROUP BY `Product Name` 
+            ORDER BY Revenue DESC 
+            LIMIT 10; </i></b></p>
+            </pre>
+        </div>
+
+        <h2>SQL Queries for Sales Trends </h2> 
+        <p><li>To analyze sales trends over time, I grouped the sales data by month using this query: </li></p> 
+        <div class ="query-block">
+            <pre> 
+           <p><b><i style="color: red;">SELECT DATE_FORMAT(`Date`, '%Y-%m') AS Month, SUM(`Total Revenue`) AS Monthly_Sales 
+            FROM `sales data` 
+            GROUP BY Month 
+            ORDER BY Month; </i></b></p> 
+            
+            </pre>
+        </div>   
+        <p>This provides the total sales for each month, allowing us to identify trends and seasonal patterns. </p> 
+    </section>
+
+    <section>
         <h2>Visualizations & Insights</h2>
-        <img src="online-sales-screenshot.jpg" alt="Online Sales Data Screenshot">
-        <p>From the analysis, I found that sales peaked during holiday seasons and that certain products consistently outperformed others. These insights can inform inventory and marketing strategies.</p>
+        <h3>Excel Analysis  </h3>
+
+        
+        <div class="image-container">
+            <p><b><ol>Total Sales by Region</ol></b></p>
+          <img src="Total Sales by region.jpg" alt="Total Sales by Region">
+        </div>
+
+        
+        <div class="image-container">
+            <p><b>Total Revenue by Category</b></p>
+            <img src="Total Revenue by category.jpg" alt="Total Revenue by Category">
+        </div>
+
+        
+        <div class="image-container">
+            <p><b>Total Sales Over Time</b></p>
+            <img src="Revenue Over Time.jpg" alt="Total Sales Over Time">
+        </div>    
+
+        
+        <div class="image-container">
+            <p><b>Total Revenue by Payment Method</b></p>
+          <img src="Revenue By payment method.jpg" alt="Total Sales Over Time">
+        </div>
+
+        <h3>Insights</h3>
+        <li> From the analysis , most of the customers are from North America</li>
+        <li> Electronics have more sales than any other category</li>
+        <li>Peak Sale time is around April</li>
+        <li>Most of the customers pay via credit card</li>
 
     </section>
 
