@@ -17,6 +17,42 @@
         <h2>Cluster Analysis Overview</h2>
         <p>This section explores the use of cluster analysis to identify patterns and groupings within the framingham heart study  dataset. Using hierarchical clustering, we divided the data into distinct groups based on cholesterol levels, age and BMI.</p>
     </section>
+    <section>
+        <h3>Dataset Overview</h3>
+        <li>Age: Age of the participants</li>
+        <li>BMI: Body Mass Index</li>
+        <li>Cholesterol: Cholesterol level</li>
+        <li>Blood Pressure: Systolic and diastolic blood pressure levels</li>
+        <li>Smoking Status: Whether the participant is a smoker</li>
+        <li>Heart Disease Risk Factors: Indicators of potential heart disease</li>  
+
+
+    </section>
+    <section>
+        <h3>Data Cleaning and Preparation</h3>
+        <p>To prepare the Framingham Heart Study dataset for cluster analysis, the following data cleaning and preprocessing steps were applied:</p>
+    <ul>
+        <li><strong>Loading and Cleaning the Data:</strong> The dataset was imported and examined for missing values. Observations containing any missing values were removed to ensure completeness:
+            <pre style="color: red; font-style: italic; font-weight: bold;">
+                framingham_1 &lt;- na.omit(framingham)
+            </pre>
+        </li>
+        <li><strong>Removing Zero-Variance Columns:</strong> Columns with zero variance, which do not contribute meaningful information, were identified and removed. Zero-variance columns were found by calculating variances and filtering out those with no variation:
+            <pre style="color: red; font-style: italic; font-weight: bold;">
+                column_variances &lt;- apply(framingham_1, 2, var)
+                zero_variance_columns &lt;- which(column_variances == 0)
+                framingham_2 &lt;- framingham_1[, -zero_variance_columns]
+            </pre>
+        </li>
+        <li><strong>Standardization:</strong> To ensure comparability between variables, the data was standardized, transforming each variable to have a mean of zero and a standard deviation of one. This step was necessary for clustering as it prevents features with larger scales from dominating:
+            <pre style="color: red; font-style: italic; font-weight: bold;">
+                DF &lt;- scale(framingham_2)
+            </pre>
+        </li>
+    </ul>
+</section>
+
+    </section>
     <section>    
         <!-- R Code Example -->
         <div class="code-block">
