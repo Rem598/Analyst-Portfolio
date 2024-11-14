@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Sales Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pizza Sales Data Analysis Using MySQL and Excel</h1>
+        
+    </header>
+    <section id="project-details">
+        <h2>Project Overview</h2>
+        <p>A SQL and Excel analysis of an pizza sales dataset.This document contains  SQL queries and visualization. </p>
+        
+        <h2>Dataset Overview</h2>
+        <p>The dataset contains the following columns:</p> 
+
+            <li><strong>pizza_id</strong>: Unique identifier for each pizza sold.</li>
+            <li><strong>order_id</strong>: Unique identifier for each customer order.</li>
+            <li><strong>pizza_name_id</strong>: Unique identifier for the name of the pizza.</li>
+            <li><strong>quantity</strong>: Number of pizzas sold in the transaction.</li>
+            <li><strong>order_date</strong>: The date when the order was placed.</li>
+            <li><strong>order_time</strong>: The time when the order was placed.</li>
+            <li><strong>unit_price</strong>: Price per individual pizza sold.</li>
+            <li><strong>total_price</strong>: Total price for the transaction (quantity * unit price).</li>
+            <li><strong>pizza_Regularize</strong>: Standardization or categorization of pizza for reporting purposes.</li>
+            <li><strong>pizza_category</strong>: The category to which the pizza belongs (e.g., vegetarian, meat, etc.).</li>
+            <li><strong>pizza_ingredients</strong>: List of ingredients used in the pizza.</li>
+            <li><strong>pizza_name</strong>: Name of the pizza sold.</li>
+            <p>Dataset used: <a href="https://drive.google.com/drive/folders/1ecpBALfFUMSK-GOnk-X4nZhC_uK18zih" target="_blank" class="dataset-link">Download the dataset here</a></p>
+
+    </section>
+    <section>
+        <h1>SQL queries</h1>
+        <div class="code-block">
+            <h3>Pizza Sales Analysis</h3>
+            <pre style="color: red; font-style: italic; font-weight: bold;">
+                -- Calculate total revenue from all sales
+                SELECT SUM(total_price) AS total_revenue
+                FROM pizza_sales.sales;
+
+                -- Calculate the average order value by dividing the total price by the unique order count
+                SELECT SUM(total_price) / COUNT(DISTINCT order_id) AS Average_Order_Value
+                FROM pizza_sales.sales;
+
+                -- Calculate the total number of pizzas sold 
+                SELECT SUM(quantity) AS Total_Pizza_Sold
+                FROM pizza_sales.sales;
+
+                -- Count the total number of unique orders
+                SELECT COUNT(DISTINCT order_id) AS Total_Orders
+                FROM pizza_sales.sales;
+
+                -- Calculate the average number of pizzas sold per order
+                SELECT SUM(quantity) / COUNT(DISTINCT order_id) AS Average_pizza_sold
+                FROM pizza_sales.sales;
+
+               -- Daily trend: Count the number of orders by day of the week
+                SELECT DATENAME(DW, order_date) AS order_day, COUNT(DISTINCT order_id) AS Total_orders
+                FROM pizza_sales.sales
+                GROUP BY DATENAME(DW, order_date);
+
+               -- Calculate the percentage of total revenue contributed by each pizza category
+                SELECT pizza_category, SUM(total_price) * 100 / (SELECT SUM(total_price) FROM pizza_sales.sales) AS total_percentage
+                FROM pizza_sales.sales
+                GROUP BY pizza_category;
+
+               -- Calculate the percentage of total revenue contributed by each pizza size
+                SELECT pizza_size, SUM(total_price) * 100 / (SELECT SUM(total_price) FROM pizza_sales.sales) AS total_percentage
+                FROM pizza_sales.sales
+                GROUP BY pizza_size;
+
+                -- Calculate the total number of pizzas sold per category
+                SELECT pizza_category, SUM(quantity) AS Total_pizza_sold
+                FROM pizza_sales.sales
+                GROUP BY pizza_category;
+
+                -- List the top 5 best-selling pizzas by quantity sold, ordered in descending order
+                SELECT pizza_name, SUM(quantity) AS total_pizza_sales
+                FROM pizza_sales.sales
+                GROUP BY pizza_name
+                ORDER BY SUM(quantity) DESC
+                LIMIT 5;
+
+                -- List the 5 least-selling pizzas by quantity sold, ordered in ascending order
+               SELECT pizza_name, SUM(quantity) AS total_pizza_sales
+               FROM pizza_sales.sales
+               GROUP BY pizza_name
+               ORDER BY SUM(quantity) ASC
+               LIMIT 5;
+            </pre>
+
+    </section>
+    <section>
+        
+        <div calss ="image-container">
+            <h2 style="color:navy">Pizza Sales Analysis Dashboard</h2>
+            <img src="Pizza.jpg" alt="Pizza Sales Dashboard"> 
+        </div>
+    </section>
+    <section>
+        <h3>Insights</h3>
+        <li><b></b> </li>
+        <li><b> </b> </li>
+        <li><b></b> </li>
+        <li><b></b> </li>
+    </section>   
+    
+    <button onclick="window.location.href='index.html'">Back to Portfolio</button>
+
+    <footer>
+        <p> &copy; 2024 Rehema. All rights reserved.</p>
+    </footer>
+</body>
+</html>
