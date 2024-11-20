@@ -8,7 +8,7 @@ function downloadPortfolio() {
     // Set options for the PDF generation
     const options = {
         margin: 0.5, // Set margin for PDF
-        filename: 'Reia_Data_Analyst_Portfolio.pdf', // Name of the PDF file
+        filename: 'Rehema_Data_Analyst_Portfolio.pdf', // Name of the PDF file
         image: { type: 'jpeg', quality: 0.98 }, // Image settings for high quality
         html2canvas: { scale: 2 }, // Improve resolution of the PDF
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' } // PDF layout settings
