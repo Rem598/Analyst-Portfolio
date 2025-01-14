@@ -45,14 +45,11 @@ You can [view the full analysis here](https://github.com/Rem598/Analyst-Portfoli
 
 ## About Me
 
-Hello! I’m Rehema, a passionate **Data Analyst** with a keen interest in turning raw data into actionable insights. I specialize in statistical analysis, data visualization, and machine learning. I love exploring data, uncovering hidden patterns, and helping businesses make data-driven decisions.
+Hello! I’m Rehema, a passionate **Data Analyst** with a keen interest in turning raw data into actionable insights. I love exploring data, uncovering hidden patterns, and helping businesses make data-driven decisions.
 
 When I’m not analyzing data, you can find me exploring new technologies or building my portfolio. I’m always eager to learn new things and take on challenging data problems.
 
 
-## License
-
-This project is licensed under the MIT License.
 
 ## Dataset Used
 
